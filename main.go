@@ -9,6 +9,7 @@ import (
 const (
   HEADS = 1
   TAILS = 0
+  RUNTIME = 1000000
 )
 
 func main() {
@@ -17,7 +18,7 @@ func main() {
   headsCounter := 0;
   tailsCounter := 0;
 
-  for i := 0; i < 1000000; i++ { 
+  for i := 0; i < RUNTIME; i++ { 
 
     x := r1.Intn(2)
     if x == HEADS {

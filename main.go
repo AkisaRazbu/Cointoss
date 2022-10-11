@@ -15,11 +15,13 @@ const (
 
 func main() {
 
-  if RUNTIME % 2 == 1 {
+
+if RUNTIME % 2 == 1 {
     fmt.Println("ERROR: The RUNTIME constant is odd.\nPlease enter an even number or comment this checker out.")
-    fmt.Println("This checker is located from line 18 to line 22 in main.go (Use /* */ to comment it out)")
+    fmt.Println("This checker is located from line 18 to line 22 in main.go")
     os.Exit(0)
-  }
+}
+
 
   // Generates the seed using nanoseconds and current time
   s1 := rand.NewSource(time.Now().UnixNano())

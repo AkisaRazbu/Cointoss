@@ -10,7 +10,7 @@ import (
 const (
   HEADS = 1
   TAILS = 0
-  RUNTIME = 1000009
+  RUNTIME = 1000000
 )
 
 func main() {

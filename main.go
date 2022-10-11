@@ -22,6 +22,11 @@ if RUNTIME % 2 == 1 {
     os.Exit(0)
 }
 
+if RUNTIME < 1 {
+  fmt.Println("The RUNTIME constant cannot be less than 1 or negative.");
+  os.Exit(0);
+}
+
 
   // Generates the seed using nanoseconds and current time
   s1 := rand.NewSource(time.Now().UnixNano())

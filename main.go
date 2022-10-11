@@ -4,15 +4,23 @@ import (
   "fmt"
   "math/rand"
   "time"
+  "os"
 )
 
 const (
   HEADS = 1
   TAILS = 0
-  RUNTIME = 1000000
+  RUNTIME = 1000009
 )
 
 func main() {
+
+  if RUNTIME % 2 == 1 {
+    fmt.Println("ERROR: The RUNTIME constant is odd.\nPlease enter an even number or comment this checker out.")
+    fmt.Println("This checker is located from line 18 to line 22 in main.go (Use /* */ to comment it out)")
+    os.Exit(0)
+  }
+
   // Generates the seed using nanoseconds and current time
   s1 := rand.NewSource(time.Now().UnixNano())
   r1 := rand.New(s1)
